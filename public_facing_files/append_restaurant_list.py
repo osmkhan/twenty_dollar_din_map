@@ -103,7 +103,8 @@ def new_articles_get_locations(scraped_df, old_list):
             article['Restaurant Name'] = rest_name
             article['Google Maps Address'] = google_maps_address
             article['Restaurant Names and Links'] = rest_name + " (" + socials_website + ")"
-            geocode_url = f"https://maps.googleapis.com/maps/api/geocode/json?address={google_maps_address}&key=AIzaSyD5ZNGiDWbtmAs6QDIOlIlA_iX7FpE9mEw"
+            #TODO: SWAP OUT THIS MAPS KEY WITH YOUR OWN: EASY TO GET, JUST GOOGLE IT
+            geocode_url = f"https://maps.googleapis.com/maps/api/geocode/json?address={google_maps_address}&key=KEY"
             response = requests.get(geocode_url).json()
 
             if response['status'] == 'OK':
