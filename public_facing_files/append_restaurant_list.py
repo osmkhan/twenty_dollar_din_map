@@ -128,7 +128,7 @@ if not articles:
 
 scraped_articles = pd.DataFrame(articles)
 scraped_articles.to_csv('scraped_articles.csv', index=False)
-master_list = pd.read_csv("restaurant_list1.csv")
+master_list = pd.read_csv("restaurant_list.csv")
 
 if scraped_articles.empty:
     print("The CSV is empty. Please check the scraping logic.")
